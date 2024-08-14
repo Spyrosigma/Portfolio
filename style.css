@@ -393,7 +393,8 @@ footer {
     flex-grow: 1;
     border-radius: 5px;
     outline: none;
-    padding: 5px;
+    padding: 2px;
+    width: 100%;
     font-size: 14px;
 }
 
