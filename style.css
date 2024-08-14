@@ -153,10 +153,10 @@ header {
     border-bottom: #ffffff 3px solid;
 }
 
-header h1 {
+header h2 {
     margin: 0;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2rem;
 }
 
 header p {
@@ -265,6 +265,11 @@ footer {
         border-radius: 0;
         padding: 1rem;
         padding-top: 2.5rem;
+    }
+
+    .about h2{
+        
+        padding: 1rem;
     }
 
     .links {
