@@ -19,7 +19,7 @@
 <body>
     <div class="myself">
         <div class="myimage">
-            <img src="assets/myimg.jpg" alt="My Photo" class="circle-image">
+            <img src="assets/myimg.jpg" alt="My Photo" name="photo" class="circle-image">
             <!-- <span>Human brain is like a universal <b>Machine Learning Model</b>, feed it with enough data for some time
                 and... <b style="font-size: large;"> BooooM &#128165;</b>, suddenly everything starts to <a
                     href="https://bento.me/spyrosigma" target="_blank" class="click"
@@ -33,11 +33,11 @@
                 <a href="https://drive.google.com/file/d/1bO_xD-bfqVIqfuUwJNbOKRnmxqIM3leK/view?usp=sharing"
                     target="_blank">
                     <span class="name">
-                        Satyam Namdev, 
+                        Satyam Namdev,
                     </span>
                 </a> and I am an aspiring Data Scientist & AI-ML Engineer.
             </h2>
-            
+
             <div class="links">
                 <div class="link github">
                     <a href="https://github.com/spyrosigma" target="_blank" class="icons"><img src="assets/github.png"
@@ -57,16 +57,22 @@
             Tech Stack I've used so far:
             <ul>
                 <li>
-                    LLMs (RAGs) | TTS (Text-to-Speech) [Trained RVC Models]
+                    Build RAG based Chatbots with PineconeDB/ChromaDB
                 </li>
                 <li>
-                    Computer Vision (Training models, Segmentation, classification)
+                    TTS (Text-to-Speech) [Trained RVC Models]
                 </li>
                 <li>
-                    Django | Flask
+                    Computer Vision (Trained models for Detection, Segmentation, classification)
                 </li>
                 <li>
-                    MySQL | Supabase | MongoDBAtlas
+                    Flask | Django
+                </li>
+                <li>
+                    Scikit-learn | PyTorch
+                </li>
+                <li>
+                    MySQL | Supabase | MongoDB-Atlas
                 </li>
                 <li>
                     Python | R
@@ -115,27 +121,27 @@
         </div>
     </section>
 
-    <!-- <div id="chatbot-icon"> -->
-        <div class="pyramid-loader" id="chatbot-icon">
-            <div class="wrapper">
-                <span class="side side1"></span>
-                <span class="side side2"></span>
-                <span class="side side3"></span>
-                <span class="side side4"></span>
-                <span class="shadow"></span>
-            </div>
+
+    <div class="pyramid-loader" id="chatbot-icon">
+        <div class="wrapper">
+            <span class="side side1"></span>
+            <span class="side side2"></span>
+            <span class="side side3"></span>
+            <span class="side side4"></span>
+            <span class="shadow"></span>
         </div>
-    <!-- </div> -->
+    </div>
+
 
     <div id="chatbot-container">
         <div id="chatbot-header">
-            <span>SpyroSigma</span>
+            <span>Namdev</span>
             <span id="close-chatbot">&times;</span>
         </div>
         <div id="chatbot-messages"></div>
         <div id="chatbot-input">
-            <input type="text" id="user-input" placeholder="Type your message...">
-            <button id="send-message">Send</button>
+            <input type="text" id="user-input" placeholder="Ask me something..">
+            <button id="send-message">Go</button>
         </div>
     </div>
 
@@ -146,7 +152,6 @@
     </footer>
 
     <script>
-        // Add a simple animation to the project cards
         document.addEventListener('DOMContentLoaded', (event) => {
             const cards = document.querySelectorAll('.project-card');
             cards.forEach((card, index) => {
