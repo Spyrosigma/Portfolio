@@ -375,10 +375,11 @@ footer {
 }
 
 .bot-message {
-    /* background-color: #2b2b2b; */
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     align-self: flex-start;
+    font-size: 12px;
+    display: flex;
 }
 
 #chatbot-input {

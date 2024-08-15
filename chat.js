@@ -1,6 +1,7 @@
 const chatbotIcon = document.getElementById('chatbot-icon');
-const chatbotContainer = document.getElementById('chatbot-container');
 const closeChatbot = document.getElementById('close-chatbot');
+
+const chatbotContainer = document.getElementById('chatbot-container');
 const chatbotMessages = document.getElementById('chatbot-messages');
 const userInput = document.getElementById('user-input');
 const sendMessage = document.getElementById('send-message');
@@ -41,7 +42,7 @@ function addMessage(message, className) {
 
 async function getBotResponse(message) {
     try {
-        const response = await fetch('YOUR_PYTHON_API_ENDPOINT', {
+        const response = await fetch('https://wild-kristi-spyrosigma-81e0cee1.koyeb.app/query', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -49,7 +50,8 @@ async function getBotResponse(message) {
             body: JSON.stringify({ message: message }),
         });
         const data = await response.json();
-        addMessage(data.response, 'bot-message');
+        console.log(data)
+        addMessage(data, 'bot-message');
     } catch (error) {
         console.error('Error:', error);
         addMessage('Sorry, I encountered an error. Please try again later.', 'bot-message');
