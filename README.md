@@ -1,4 +1,4 @@
-# Portfolio website powered with with Flask backend
+# Portfolio website powered by Flask backend and HTML5-CSS-Js Frontend
 
 ### Low-latency Chatbot. Rag implemented on my projects and portfolio data.
 
