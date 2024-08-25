@@ -17,6 +17,23 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span><img src="/assets/finalogo.png" alt=""></span>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Blogs</a></li>
+                <li><a href="">Resources</a></li>
+            </ul>
+        </nav>
+    </header><hr>
     <div class="myself">
         <div class="myimage">
             <img src="assets/myimg.jpg" alt="My Photo" name="photo" class="circle-image">
@@ -148,7 +165,7 @@
     <script src="chat.js"></script>
 
     <footer>
-        <p>&copy; 2024 SpyroSigma | All rights reserved </p>
+        <p>&copy; 2024 SpyroSigma | All rights reserved</p>
     </footer>
 
     <script>
@@ -166,16 +183,25 @@
         });
     </script>
 
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navUl = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navUl.classList.toggle('show');
+        });
+    </script>
+
     <!-- Vercel Insights -->
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
-        <!-- Vercel Speed anaytics -->
+    <!-- Vercel Speed anaytics -->
     <script>
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/speed-insights/script.js"></script>
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 
 </html>
