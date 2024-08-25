@@ -57,7 +57,7 @@ ul {
 .circle-image {
     box-sizing: border-box;
     position: relative;
-    border-radius: 25%;
+    border-radius: 50%;
     max-width: 270px;
     max-height: 270px;
     width: auto;
