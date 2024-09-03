@@ -359,6 +359,8 @@ footer {
     background-color: #ffffff;
     box-shadow: rgb(13, 13, 13) 0px 0px 1px 0px;
     color: #080808;
+    font-weight: bold;
+    font-size: 12px;
     align-self: flex-end;
     margin-left: auto;
 }
