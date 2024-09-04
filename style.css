@@ -32,7 +32,7 @@ ul {
 
 .myself {
     max-width: 1000px;
-    /* background-color: RGB(64, 64, 64); */
+    background-color: #1a1a1a;
     min-height: 60vh;
     height: auto;
     max-height: 100vh;
@@ -52,6 +52,7 @@ ul {
     /* overflow-y: auto; */
     overflow-x: hidden;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .circle-image {
@@ -191,11 +192,17 @@ ul {
 
 .project-card h3 {
     margin-top: 0;
-    color: #9100bd;
+    color: #a400d6;
+
+}
+.project-card a img {
+    width: 26px;
+    border-radius: 50%;
 }
 
 .project-card p {
     margin-bottom: 10px;
+    font-size: 0.9em;
 }
 
 .project-card .tags {
@@ -205,7 +212,7 @@ ul {
 }
 
 .project-card .tag {
-    background: #9100bd;
+    background: linear-gradient(180deg, #cc36fa, #9100bd);
     color: #ecf0f1;
     padding: 5px 10px;
     border-radius: 3px;
@@ -598,3 +605,15 @@ nav ul li a {
         margin-right: 1rem;
     }
 }
+
+/* For the pattern the background*/ 
+.pattern {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+  }
