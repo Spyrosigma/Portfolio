@@ -215,7 +215,7 @@ ul {
 .project-card .tag {
     /* background: linear-gradient(180deg, #cc36fa, #9100bd); */
     /* color: #ecf0f1; */
-    background: linear-gradient(to right, rgb(177, 9, 255), rgb(176, 133, 255));;
+    background: linear-gradient(to right,rgb(169, 223, 255), rgb(255, 185, 243));
     color:black;
     padding: 5px 10px;
     border-radius: 3px;
