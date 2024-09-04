@@ -8,6 +8,14 @@ body {
     line-height: 1.6;
 }
 
+.suse-body {
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
 a {
     color: inherit;
     text-decoration: none;
@@ -46,7 +54,7 @@ ul {
     padding: 10px;
     color: white;
     /* border: rgb(0, 0, 0) 2px solid; */
-    box-shadow: white 0px 0px 10px 0px;
+    /* box-shadow: white 0px 0px 10px 0px; */
     display: flex;
     flex-wrap: wrap;
     /* overflow-y: auto; */
@@ -245,7 +253,7 @@ footer {
         padding-top: 2.5rem;
     }
 
-    .about h2{
+    .about h2 {
         padding: 1rem;
     }
 
@@ -297,7 +305,7 @@ footer {
     right: 0.5rem;
     width: 300px;
     height: 400px;
-    background:url(assets/chatbg.png);
+    background: url(assets/chatbg.png);
     /* backdrop-filter: blur(10px); */
     border-radius: 10px;
     border: 1px solid #e0e0e0;
@@ -313,8 +321,8 @@ footer {
     height: 100%;
     background: url(assets/chatbg.png) no-repeat center;
     background-size: cover;
-    filter: blur(2px); 
-    z-index: -1; 
+    filter: blur(2px);
+    z-index: -1;
 }
 
 #chatbot-header {
@@ -346,7 +354,7 @@ footer {
     background-image: url('finalogo.png');
     background-size: contain;
     background-position: center;
-  }
+}
 
 .message {
     margin-bottom: 10px;
@@ -394,11 +402,11 @@ footer {
     width: 20px;
     height: 20px;
     object-fit: cover;
-    }
+}
 
 #user-input {
     background-color: #ffffff;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     flex-grow: 1;
     border-radius: 5px;
     outline: none;
@@ -596,5 +604,131 @@ nav ul li a {
         display: flex;
         margin-left: auto;
         margin-right: 1rem;
+    }
+}
+
+/* code added by rohan37kumar */
+body {
+    --color: rgba(0, 115, 19, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(180deg,
+            transparent 24%,
+            var(--color) 25%,
+            var(--color) 26%,
+            transparent 27%,
+            transparent 74%,
+            var(--color) 75%,
+            var(--color) 76%,
+            transparent 77%,
+            transparent),
+        linear-gradient(45deg,
+            transparent 24%,
+            var(--color) 35%,
+            var(--color) 26%,
+            transparent 17%,
+            transparent 74%,
+            var(--color) 75%,
+            var(--color) 76%,
+            transparent 77%,
+            transparent);
+    background-size: 55px 55px;
+
+}
+
+.myself {
+    background: #171717;
+    transition: 1s ease-in-out;
+    clip-path: polygon(50px 0%, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0% 50px);
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 2px solid rgb(164, 195, 197);
+}
+
+
+header {
+    box-shadow: 0 0px 5px 0 rgb(255, 255, 255);
+}
+
+.project-card {
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 5px 5px 10px rgb(25, 25, 25),
+        -5px -5px 10px rgb(60, 60, 60);
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 40px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    margin: auto auto;
+}
+
+/* for all social containers*/
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+}
+
+/* linkdin*/
+.containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+}
+
+.containerFour:hover {
+    background-color: #4c4d4d;
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
