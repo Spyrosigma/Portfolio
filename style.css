@@ -46,7 +46,7 @@ ul {
     padding: 10px;
     color: white;
     /* border: rgb(0, 0, 0) 2px solid; */
-    box-shadow: white 0px 0px 10px 0px;
+    box-shadow: white 0px 0px 8px 0px;
     display: flex;
     flex-wrap: wrap;
     /* overflow-y: auto; */
@@ -64,8 +64,8 @@ ul {
     width: auto;
     height: auto;
     background-color: #000000;
-    border: rgb(0, 0, 0) 3px solid;
-    box-shadow: rgb(255, 255, 255) 0px 0px 7px 0px;
+    border: rgb(218, 218, 218) 3px solid;
+    /* box-shadow: rgb(255, 255, 255) 0px 0px 7px 0px; */
     margin: auto;
     align-items: center;
     display: flex;
@@ -295,13 +295,13 @@ hr {
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color: #1d1d1d;
+    /* background-color: #1d1d1d; */
     border-radius: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 0 10px 0 white;
+    /* box-shadow: 0 0 10px 0 white; */
     transition: transform 0.3s ease;
 }
 
