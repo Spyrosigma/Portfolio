@@ -1,10 +1,42 @@
 const chatbotIcon = document.getElementById('chatbot-icon');
 const closeChatbot = document.getElementById('close-chatbot');
-
 const chatbotContainer = document.getElementById('chatbot-container');
 const chatbotMessages = document.getElementById('chatbot-messages');
 const userInput = document.getElementById('user-input');
 const sendMessage = document.getElementById('send-message');
+
+// Initialize Socket.IO with additional options
+const socket = io('https://wild-kristi-spyrosigma-81e0cee1.koyeb.app/', {
+// const socket = io('http://localhost:5000/', {
+    transports: ['websocket'],
+    reconnection: true,
+    reconnectionAttempts: 5,
+    reconnectionDelay: 1000,
+    timeout: 10000
+});
+
+// gunicorn -k gevent --timeout 600 app:app -w 1
+// gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 app:app --timeout 600
+
+let userId = null;
+
+socket.on('connect', () => {
+    console.log('Connected to server');
+});
+
+socket.on('connect_error', (error) => {
+    console.error('Connection error:', error);
+});
+
+socket.on('set_user_id', (data) => {
+    userId = data.user_id;
+    console.log('Received user ID:', userId);
+    socket.emit('join', { user_id: userId });
+});
+
+socket.on('bot_response', (message) => {
+    addMessage(message.data, 'bot-message');
+});
 
 chatbotIcon.addEventListener('click', () => {
     chatbotContainer.style.display = 'flex';
@@ -25,10 +57,10 @@ userInput.addEventListener('keypress', (e) => {
 
 function sendUserMessage() {
     const message = userInput.value.trim();
-    if (message) {
+    if (message && userId) {
         addMessage(message, 'user-message');
         userInput.value = '';
-        getBotResponse(message);
+        socket.emit('user_message', { data: message, user_id: userId });
     }
 }
 
@@ -38,23 +70,4 @@ function addMessage(message, className) {
     messageElement.textContent = message;
     chatbotMessages.appendChild(messageElement);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-}
-
-async function getBotResponse(message) {
-    try {
-        // const response = await fetch('https://wild-kristi-spyrosigma-81e0cee1.koyeb.app/query', {
-        const response = await fetch('http://127.0.0.1:5000/query', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ message: message }),
-        });
-        const data = await response.json();
-        console.log(data)
-        addMessage(data, 'bot-message');
-    } catch (error) {
-        console.error('Error:', error);
-        addMessage('Sorry, I encountered an error. Please try again later.', 'bot-message');
-    }
 }
