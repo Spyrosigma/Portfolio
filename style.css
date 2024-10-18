@@ -194,8 +194,9 @@ ul {
 .project-card h3 {
     margin-top: 0;
     color: rgb(250, 250, 250);
-     
+
 }
+
 .project-card a img {
     width: 26px;
     border-radius: 50%;
@@ -215,8 +216,8 @@ ul {
 .project-card .tag {
     /* background: linear-gradient(180deg, #cc36fa, #9100bd); */
     /* color: #ecf0f1; */
-    background: linear-gradient(to right,rgb(169, 223, 255), rgb(255, 185, 243));
-    color:black;
+    background: linear-gradient(to right, rgb(169, 223, 255), rgb(255, 185, 243));
+    color: black;
     padding: 5px 10px;
     border-radius: 3px;
     margin-right: 5px;
@@ -257,7 +258,7 @@ footer {
     }
 
 
-    .about h2{
+    .about h2 {
         padding: 1rem;
     }
 
@@ -285,8 +286,9 @@ hr {
     border: none;
     margin: 0;
     height: 3px;
-    background: linear-gradient(to right, rgb(32, 32, 32), rgb(255, 255, 255) , rgb(32, 32, 32));
+    background: linear-gradient(to right, rgb(32, 32, 32), rgb(255, 255, 255), rgb(32, 32, 32));
 }
+
 /* Code below is for Chatbot */
 
 #chatbot-icon {
@@ -315,7 +317,7 @@ hr {
     right: 0.5rem;
     width: 300px;
     height: 400px;
-    background:url(assets/chatbg.png);
+    background: url(assets/chatbg.png);
     /* backdrop-filter: blur(10px); */
     border-radius: 10px;
     border: 1px solid #e0e0e0;
@@ -331,8 +333,8 @@ hr {
     height: 100%;
     background: url(assets/chatbg.png) no-repeat center;
     background-size: cover;
-    filter: blur(2px); 
-    z-index: -1; 
+    filter: blur(2px);
+    z-index: -1;
 }
 
 #chatbot-header {
@@ -364,7 +366,7 @@ hr {
     background-image: url('finalogo.png');
     background-size: contain;
     background-position: center;
-  }
+}
 
 .message {
     margin-bottom: 10px;
@@ -412,11 +414,11 @@ hr {
     width: 20px;
     height: 20px;
     object-fit: cover;
-    }
+}
 
 #user-input {
     background-color: #ffffff;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     flex-grow: 1;
     border-radius: 5px;
     outline: none;
@@ -454,7 +456,7 @@ hr {
     display: block;
     transform-style: preserve-3d;
     transform: rotateX(-20deg);
-    /* margin: 1.2rem; */
+    /* transform: rotateY(-50deg); */
     text-align: right;
     align-items: right;
 }
@@ -464,7 +466,7 @@ hr {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    animation: spin 4s linear infinite;
+    animation: spin 0.7s linear infinite;
 }
 
 @keyframes spin {
@@ -520,6 +522,39 @@ hr {
     filter: blur(12px);
 }
 
+/* Add new spark styles */
+.spark {
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 300px;
+    background: linear-gradient(to bottom, #f87a05, #fcfcfc, #dc2bff);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 white;
+    animation: spark 5s infinite;
+}
+
+@keyframes spark {
+
+    0%,
+    80.9% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+    }
+}
 
 /* ------------------------------ For Navbar !! -------------------------------------------*/
 
@@ -615,19 +650,20 @@ nav ul li a {
         margin-left: auto;
         margin-right: 1rem;
     }
+
     .pattern {
         margin-top: 1rem;
     }
 }
 
-/* For the background pattern */ 
+/* For the background pattern */
 .pattern {
     width: 100%;
     height: 100%;
     z-index: -1;
     --color: rgba(151, 150, 168, 0.089);
     background-color: #191a1a;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
     background-size: 100px 100px;
-  }
+}
