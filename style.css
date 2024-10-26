@@ -174,7 +174,7 @@ ul {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 5fr));
     grid-gap: 20px;
 }
 
@@ -187,9 +187,6 @@ ul {
     z-index: 0;
 }
 
-/* .project-card:hover {
-    transform: translateY(-5px);
-} */
 
 .project-card h3 {
     margin-top: 0;
@@ -200,6 +197,7 @@ ul {
 .project-card a img {
     width: 26px;
     border-radius: 50%;
+    border: 1px solid #ecf0f1;
 }
 
 .project-card p {
