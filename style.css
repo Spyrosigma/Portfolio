@@ -196,8 +196,13 @@ ul {
 
 .project-card a img {
     width: 26px;
+
+    padding: 1.5px;
+   
+}
+.project_card_github-link img {
+    box-shadow: 0 0 5px 0 white;
     border-radius: 50%;
-    border: 1px solid #ecf0f1;
 }
 
 .project-card p {
