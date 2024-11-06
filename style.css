@@ -198,8 +198,9 @@ ul {
     width: 26px;
 
     padding: 1.5px;
-   
+
 }
+
 .project_card_github-link img {
     box-shadow: 0 0 5px 0 white;
     border-radius: 50%;
@@ -389,9 +390,6 @@ hr {
 }
 
 .bot-message {
-    /* background-color: rgb(214, 212, 212); */
-    /* box-shadow: rgb(43, 43, 43) 0px 0px 7px 0px; */
-    /* background: url('assets/finalogo.png')no-repeat; */
     background-size: 20px;
     border-radius: 12px 12px 2px 2px;
     color: rgb(237, 234, 234);
@@ -576,10 +574,17 @@ nav {
     padding: 0rem;
 }
 
+nav span {
+    padding: 0;
+    z-index: 1;
+    padding: 1rem;
+    color: #ebebeb;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
 .logo {
-    display: flex;
-    align-items: center;
-    padding: 1rem 0 0rem 1rem;
+    padding: 0.5rem 0rem 0rem 0.5rem;
 }
 
 .logo img {
@@ -588,75 +593,18 @@ nav {
     box-shadow: 0 0 10px 0 white;
 }
 
-.logo span {
-    font-size: 1.5rem;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 2px 0;
-}
 
 @media screen and (max-width: 768px) {
 
     nav {
         position: relative;
-    }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 34%;
-        background-color: black;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        z-index: 1;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 0.5rem;
-        text-align: center;
-    }
-
-    .hamburger {
-        display: flex;
-        margin-left: auto;
-        margin-right: 1rem;
     }
 
     .pattern {
         margin-top: 1rem;
     }
+
 }
 
 /* For the background pattern */
