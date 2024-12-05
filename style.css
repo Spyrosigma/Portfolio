@@ -562,10 +562,10 @@ hr {
 
 /* Header and navigation */
 header {
-    /* background: black;     */
     background-color: #1a1a1a;
     color: #ecf0f1;
     padding: 0rem;
+    position: relative; /* Added */
 }
 
 nav {
@@ -575,40 +575,104 @@ nav {
     padding: 0rem;
 }
 
-nav span {
-    padding: 0;
-    z-index: 1;
+nav .logo {
+    padding: 0.5rem 0rem 0rem 0.5rem;
+}
+
+nav .links {
+    display: flex;
+    gap: 1rem;
+}
+
+nav .links span {
     padding: 1rem;
     color: #ebebeb;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.logo {
-    padding: 0.5rem 0rem 0rem 0.5rem;
-}
-
-.logo img {
+nav .logo img {
     height: 40px;
     border-radius: 50%;
     box-shadow: 0 0 10px 0 white;
 }
 
-
-@media screen and (max-width: 768px) {
-
-    nav {
-        position: relative;
-
-    }
-
-    .pattern {
-        margin-top: 1rem;
-    }
-
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 100;
 }
 
-/* For the background pattern */
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ecf0f1;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        position: relative;
+        flex-direction: row; /* Change to row to keep logo and hamburger side by side */
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    nav .links {
+        position: absolute;
+        top: 100%;
+        right: 0; /* Align to right instead of full width */
+        display: none;
+        flex-direction: column;
+        width: 100px; /* Fixed width for dropdown */
+        background-color: #1a1a1a;
+        padding: 0;
+        margin: 0;
+        z-index: 1001;
+    }
+
+    nav .links span {
+        padding: 0.75rem 1.5rem;
+        text-align: left; /* Align text to left */
+        border-top: 1px solid #333;
+    }
+
+    nav .links span:first-child {
+        border-top: none;
+    }
+    nav .links.active {
+        display: flex !important; /* Force display with !important */
+    }
+    .hamburger {
+        display: flex;
+        margin-right: 1rem;
+    }
+
+    /* Animation for hamburger icon */
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    .hamburger div {
+        width: 22px; /* Slightly smaller lines */
+        height: 2px; /* Thinner lines */
+        background-color: #ecf0f1;
+        margin: 3px; /* Reduced spacing */
+        transition: all 0.3s ease;
+    }
+}
+
 .pattern {
     width: 100%;
     height: 100%;

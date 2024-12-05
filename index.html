@@ -18,18 +18,26 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <span class="logo">
                 <a href="https://codolio.com/profile/spyrosigma" target="_blank">
                     <img src="/assets/codolio.jpg" alt="codolio">
                 </a>
             </span>
-            <span><a target="_blank"
-                    href="https://drive.google.com/drive/folders/1_YPqWldOzjlVtnqhajbCSkIJE5ALDVFn?usp=sharing">Resume</a></span>
-
-            <span> <a href="https://medium.com/@namdev2003satyam">Blogs</a> </span>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="links">
+                <span><a target="_blank"
+                        href="https://drive.google.com/drive/folders/1_YPqWldOzjlVtnqhajbCSkIJE5ALDVFn?usp=sharing">Resume</a></span>
+                <span><a href="https://medium.com/@namdev2003satyam" target="_blank">Blogs</a></span>
+                <span><a href="https://terrific-clematis-f3a.notion.site/thoughts-for-life-14e288dc6a3a80f1a41dc6dd3c0af13b" target="_blank">Thoughts</a></span>
+            </div>
         </nav>
     </header>
+
     <div class="pattern">
         <hr>
         <div class="myself">
@@ -255,10 +263,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
         <script src="try.js"></script>
 
-        <footer>
-            <p>&copy; 2024 SpyroSigma | All rights reserved</p>
-        </footer>
     </div>
+    <footer>
+        <p>&copy; 2024 SpyroSigma | All rights reserved</p>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
@@ -282,6 +290,15 @@
         hamburger.addEventListener('click', () => {
             navUl.classList.toggle('show');
         });
+    </script>
+
+    <script>
+        function toggleMenu() {
+        const hamburger = document.querySelector('.hamburger');
+        const links = document.querySelector('.links');
+        hamburger.classList.toggle('active');
+        links.classList.toggle('active');
+    }
     </script>
 
     <!-- Vercel Insights -->
