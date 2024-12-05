@@ -630,14 +630,18 @@ nav .logo img {
         flex-direction: column;
         width: 100px; /* Fixed width for dropdown */
         background-color: #1a1a1a;
-        padding: 0;
+        padding: 3px;
         margin: 0;
         z-index: 1001;
+        border-radius: 5px;
+        text-decoration: underline #ecf0f1;
+
     }
 
     nav .links span {
-        padding: 0;
+        padding: 0.5rem 0 0 0 ;
         text-align: left; /* Align text to left */
+        /* border-top: 1px solid #333; */
     }
 
     nav .links span:first-child {
@@ -648,7 +652,7 @@ nav .logo img {
     }
     .hamburger {
         display: flex;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
     }
 
     /* Animation for hamburger icon */
@@ -670,6 +674,7 @@ nav .logo img {
         background-color: #ecf0f1;
         margin: 3px; /* Reduced spacing */
         transition: all 0.3s ease;
+        border-radius: 5px;
     }
 }
 
