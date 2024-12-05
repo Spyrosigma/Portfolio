@@ -625,7 +625,7 @@ nav .logo img {
     nav .links {
         position: absolute;
         top: 100%;
-        right: 0; /* Align to right instead of full width */
+        right: 0rem; /* Align to right instead of full width */
         display: none;
         flex-direction: column;
         width: 100px; /* Fixed width for dropdown */
@@ -636,9 +636,8 @@ nav .logo img {
     }
 
     nav .links span {
-        padding: 0.75rem 1.5rem;
+        padding: 0;
         text-align: left; /* Align text to left */
-        border-top: 1px solid #333;
     }
 
     nav .links span:first-child {
@@ -664,6 +663,7 @@ nav .logo img {
     .hamburger.active div:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
     }
+
     .hamburger div {
         width: 22px; /* Slightly smaller lines */
         height: 2px; /* Thinner lines */
