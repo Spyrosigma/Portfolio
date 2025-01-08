@@ -633,11 +633,12 @@ nav .logo img {
         flex-direction: column;
         width: 100px; /* Fixed width for dropdown */
         background-color: #1a1a1a;
-        padding: 3px;
+        padding: 5px;
         margin: 0;
         z-index: 1001;
         border-radius: 5px;
-        text-decoration: underline #ecf0f1;
+        border: 1px solid white;
+        /* text-decoration: underline #ecf0f1; */
 
     }
 
